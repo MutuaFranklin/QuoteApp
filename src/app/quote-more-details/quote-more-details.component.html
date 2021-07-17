@@ -1,0 +1,11 @@
+<div class="col-md-12 more-details" >
+  <p>Published by: {{moreQuoteDetails.publisher}}</p>
+  <p>Date published: {{moreQuoteDetails.DatePublished|dateCount}} </p>
+
+  <!-- <p>Time published: {{ moreQuoteDetails.time | date: 'dd/MM/yyyy'}}</p> -->
+</div>
+
+  <!-- Button that deletes tghe entire quote -->
+<div class="delete">
+  <button type="submit" class="btn  btn-danger" (click)='quoteDelete(true)'>Delete</button>
+</div>

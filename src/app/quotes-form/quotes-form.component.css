@@ -1,0 +1,12 @@
+form{
+  border: 1px solid white;
+  background-color: rgb(81, 81, 131, 0.5);
+}
+
+.btn{
+  background-color: #0c7eaf;
+  border: 1px solid white;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}

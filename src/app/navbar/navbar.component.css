@@ -1,0 +1,31 @@
+.navbar{
+  /* background: transparent !important; */
+  /* background-color: rgb(137, 100, 224) !important; */
+  background: linear-gradient(75deg, rgb(35, 35, 87), rgb(72, 69, 150), rgb(52, 5, 87)) !important;
+
+  color: aliceblue;
+  border-bottom: 1px solid #0c7eaf;
+}
+
+.navbar-brand{
+  color: aliceblue;
+  font-weight: bold;
+
+}
+
+.btn{
+  background-color: #0c7eaf;
+  border: 1px solid white;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+input{
+  border: 2px solid #021a24;
+
+}
+
+input::placeholder{
+  font-weight: 600;
+
+}

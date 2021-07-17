@@ -1,0 +1,24 @@
+.more-details{
+  background-color: rgba(155, 171, 211, 0.5);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(6, 19, 43);
+
+}
+.delete{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn{
+  margin: 10px;
+  /* background-color: #0c7eaf; */
+  border: 1px solid white;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+

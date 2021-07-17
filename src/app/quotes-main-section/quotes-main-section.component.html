@@ -1,0 +1,54 @@
+<div class="quotes-main">
+  <app-navbar></app-navbar>
+
+  <div class="container-fluid main-page">
+    <div class="container-fluid main-section">
+      <div class="col-md-3 form-container">
+        <h4>Form</h4>
+        <app-quotes-form (addQuote) = 'addNewQuote($event)'></app-quotes-form>
+      </div>
+
+      <div class="col-md-5 quote-container m-3">
+        <h4>Quote List</h4>
+        <div class="col-md-11 quote" *ngFor='let quote of quotes; let i = index'>
+          <div class="quote-box">
+            <h4> {{quote.publishedQuote}} </h4>
+            <p>Author: {{quote.author}} </p>
+
+          </div>
+          <div class="quote-reaction" >
+
+            <div class="like">
+              <p appCursorPointer (click)="likesIncrement(true)"><i class="fa fa-thumbs-up" aria-hidden="true" ></i></p>
+              <span>{{quote.likes}}</span>
+            </div>
+
+            <div class="dislike">
+              <p appCursorPointer (click)="downVote()"><i class="fa fa-thumbs-down" aria-hidden="true"></i></p>
+              <span>{{quote.dislikes}}</span>
+            </div>
+
+          </div>
+
+          <div class="toggle">
+            <button type="submit" class="btn btn-primary"  (click)='toggleDetails(i)'>Show More Details</button>
+            <div *ngIf = 'quote.showMoreQuoteDetails'>
+              <!-- Below is for input property binding and output property binding-->
+              <app-quote-more-details [moreQuoteDetails]='quote' (deleteQuote) = 'removeQuote($event,0)'></app-quote-more-details>
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+
+      <div class="col-md-4 popular-container">
+        <h4>Popular Quotes</h4>
+      </div>
+
+    </div>
+  </div>
