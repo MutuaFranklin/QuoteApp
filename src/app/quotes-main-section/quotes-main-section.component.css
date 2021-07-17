@@ -45,6 +45,11 @@
 
 }
 
+.quote-box h4{
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
 .opacity{
   background-color: rgb(81, 81, 131, 0.5);
 

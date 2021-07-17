@@ -14,7 +14,7 @@ export class QuotesMainSectionComponent implements OnInit {
 
     ];
 
-   
+
 
   addNewQuote(quote:any){
     let quoteLength = this.quotes.length;
@@ -52,8 +52,20 @@ export class QuotesMainSectionComponent implements OnInit {
 
   }
 
+  // likesArray = this.quotes[5];
 
+  maxLikes = () =>{
+    // var likesArr = this.quotes[5]; // use int arrays
+    // var max = Math.max.apply(null, likesArr); // get the max of the array
+    // likesArr.splice(likesArr.indexOf(max), 1); // remove max from the array
+    // return Math.max.apply(null, likesArr); //
+  }
 
+//   const input = [5, 150, 2, 8, 58, 4];
+
+// const result = input.sort((x, y) => y - x).slice(0, 2);
+
+// console.log(result);
 
   constructor() { }
 
