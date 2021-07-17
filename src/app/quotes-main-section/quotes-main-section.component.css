@@ -126,3 +126,13 @@
 .toggle .btn:hover{
   background-color: #1b1a46;
 }
+
+.popular-container{
+  color: white;
+}
+
+
+.main-page h4{
+  font-size: 17px;
+  text-align: center;
+}
