@@ -10,3 +10,8 @@ form{
   font-size: 14px;
   font-weight: 600;
 }
+
+
+.btn:hover{
+  background-color: #1b1a46;
+}

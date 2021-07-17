@@ -1,4 +1,4 @@
-<form #quoteForm = 'ngForm' (ngSubmit) = 'submitQuote()'>
+<form #quoteForm = 'ngForm' (ngSubmit) = 'submitQuote(quoteForm); quoteForm.resetForm()'>
   <div class="m-3">
     <label for="quote" class="form-label">Quote</label>
     <textarea class="form-control" id="description" rows="6"  [(ngModel)] = "newQuote.publishedQuote" name="quote" #quote='ngModel' required></textarea>

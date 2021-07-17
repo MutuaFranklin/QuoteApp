@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { QuotesBlueprint } from 'src/models/quotes-blueprint';
 
 @Component({
@@ -11,8 +12,10 @@ export class QuotesFormComponent implements OnInit {
   newQuote = new QuotesBlueprint(0, "","", "", new Date(), 0, 0);
   @Output() addQuote = new EventEmitter<QuotesBlueprint>();
 
-  submitQuote(){
+  submitQuote(form: NgForm){
     this.addQuote.emit(this.newQuote);
+    form.resetForm()
+
   }
 
 
