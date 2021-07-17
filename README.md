@@ -53,7 +53,7 @@ As a user I would like to:
 
 ## Live link
 
-Live link: [FleekyBite Pizza live link](https://mutuafranklin.github.io/FleekyBite-Pizza/)
+Live link: [QuotesApp live link](https://mutuafranklin.github.io/QuoteApp/)
 
 ## Support and contact details
 
