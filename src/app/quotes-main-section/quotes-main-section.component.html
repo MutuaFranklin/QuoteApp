@@ -19,12 +19,12 @@
           <div class="quote-reaction" >
 
             <div class="like">
-              <p appCursorPointer (click)="likesIncrement(true)"><i class="fa fa-thumbs-up" aria-hidden="true" ></i></p>
+              <p appCursorPointer (click)="upVote(i)"><i class="fa fa-thumbs-up" aria-hidden="true" ></i></p>
               <span>{{quote.likes}}</span>
             </div>
 
             <div class="dislike">
-              <p appCursorPointer (click)="downVote()"><i class="fa fa-thumbs-down" aria-hidden="true"></i></p>
+              <p appCursorPointer (click)="downVote(i)"><i class="fa fa-thumbs-down" aria-hidden="true"></i></p>
               <span>{{quote.dislikes}}</span>
             </div>
 

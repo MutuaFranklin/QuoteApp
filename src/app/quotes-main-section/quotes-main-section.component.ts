@@ -14,23 +14,14 @@ export class QuotesMainSectionComponent implements OnInit {
 
     ];
 
-    @Output() likeVote = new EventEmitter <boolean>();
-    @Output() dislikeVote = new EventEmitter <boolean>();
-
-    likesIncrement(like:boolean){
-      this.likeVote.emit(like);
-    }
-
-    dislikesIncrement(dislike:boolean){
-      this.dislikeVote.emit(dislike);
-    }
+   
 
   addNewQuote(quote:any){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
-    // quote.postDate = new Date(quote.postDate);
     this.quotes.push(quote)
   }
+
 
    //Function to hide/show more quote details
    toggleDetails(index:number){
@@ -49,20 +40,16 @@ export class QuotesMainSectionComponent implements OnInit {
   }
 
 //upVote and downVote value and counter
-  upVoteCounter = 0;
 
-  upVote(likeVote:boolean, index:number){
-    if(likeVote){
+  upVote(index:number){
       this.quotes[index].likes ++
-    }
+
 
   }
 
+  downVote(index:number){
+    this.quotes[index].dislikes ++
 
-  downVoteCounter = 0;
-
-  downVote(){
-    this.downVoteCounter++;
   }
 
 
