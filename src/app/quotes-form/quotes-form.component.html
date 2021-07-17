@@ -1,4 +1,4 @@
-<form #quoteForm = 'ngForm' (ngSubmit) = 'submitQuote(quoteForm); quoteForm.resetForm()'>
+<form #quoteForm = 'ngForm' (ngSubmit) = 'submitQuote(quoteForm)'>
   <div class="m-3">
     <label for="quote" class="form-label">Quote</label>
     <textarea class="form-control" id="description" rows="6"  [(ngModel)] = "newQuote.publishedQuote" name="quote" #quote='ngModel' required></textarea>
@@ -17,6 +17,6 @@
 
   </div>
   <div class="m-3">
-      <button type="submit" class="btn btn-primary">Publish</button>
+      <button type="submit" class="btn btn-primary" [disabled]="!quoteForm.valid">Publish</button>
   </div>
 </form>
