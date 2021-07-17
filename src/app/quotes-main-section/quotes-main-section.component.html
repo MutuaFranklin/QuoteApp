@@ -34,7 +34,7 @@
             <button type="submit" class="btn btn-primary"  (click)='toggleDetails(i)'>Show More Details</button>
             <div *ngIf = 'quote.showMoreQuoteDetails'>
               <!-- Below is for input property binding and output property binding-->
-              <app-quote-more-details [moreQuoteDetails]='quote' (deleteQuote) = 'removeQuote($event,0)'></app-quote-more-details>
+              <app-quote-more-details [moreQuoteDetails]='quote' (deleteQuote) = 'removeQuote($event, i)'></app-quote-more-details>
 
             </div>
           </div>
