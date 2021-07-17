@@ -49,41 +49,34 @@
 
       <div class="col-md-4 popular-container">
         <h4>Popular Quotes</h4>
-        <div class="col-md-11 quote" *ngFor='let quote of quotes; let i = index'>
-          <div class="maxLikes">
-            <div class="quote-box">
-              <h4> {{quote.publishedQuote}} </h4>
-              <p>Author: {{quote.author}} </p>
 
-            </div>
-            <div class="quote-reaction" >
+        <div class="col-md-11 quote">
+          <div class="quote-box">
+            <h4>{{maxValues[0].publishedQuote}}</h4>
+            <p>Author: {{maxValues[0].author}} </p>
 
-              <div class="like">
-                <p appCursorPointer (click)="upVote(i)"><i class="fa fa-thumbs-up" aria-hidden="true" ></i></p>
-                <span>{{quote.likes}}</span>
-              </div>
-
-              <div class="dislike">
-                <p appCursorPointer (click)="downVote(i)"><i class="fa fa-thumbs-down" aria-hidden="true"></i></p>
-                <span>{{quote.dislikes}}</span>
-              </div>
-
-            </div>
-
-            <div class="toggle">
-              <button type="submit" class="btn btn-primary"  (click)='toggleDetails(i)'>Show More Details</button>
-              <div *ngIf = 'quote.showMoreQuoteDetails'>
-                <!-- Below is for input property binding and output property binding-->
-                <app-quote-more-details [moreQuoteDetails]='quote' (deleteQuote) = 'removeQuote($event, i)'></app-quote-more-details>
-
-              </div>
-            </div>
           </div>
+          <div class="quote-reaction" >
 
+            <div class="like">
+              <p appCursorPointer ><i class="fa fa-thumbs-up" aria-hidden="true" ></i></p>
+              <span>{{maxValues[0].likes}}</span>
+            </div>
+
+            <div class="dislike">
+              <p appCursorPointer ><i class="fa fa-thumbs-down" aria-hidden="true"></i></p>
+              <span>{{maxValues[0].dislikes}}</span>
+            </div>
+
+          </div>
 
         </div>
 
+
+
+
       </div>
+
 
     </div>
   </div>

@@ -14,7 +14,8 @@ export class QuotesMainSectionComponent implements OnInit {
 
     ];
 
-
+     max = Math.max(...this.quotes.map(quote => quote.likes));
+     maxValues = this.quotes.filter(quote => quote.likes == this.max);
 
   addNewQuote(quote:any){
     let quoteLength = this.quotes.length;
