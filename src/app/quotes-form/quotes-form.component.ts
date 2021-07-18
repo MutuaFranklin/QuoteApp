@@ -24,13 +24,7 @@ export class QuotesFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    $('#quoteForm').on('click', function () {
-      $('#quoteForm').find('input').val('');
-      $('#quoteForm').find('textarea').val('');
-
-    });
-
-
+  
 
   }
 
