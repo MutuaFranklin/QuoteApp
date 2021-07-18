@@ -12,13 +12,19 @@ import * as $ from 'jquery';
 })
 export class QuotesFormComponent implements OnInit {
 
-  @Input() newQuote = new QuotesBlueprint(0, "","", "", new Date(), 0, 0);
+  newQuote = new QuotesBlueprint(0, "","", "", new Date(), 0, 0);
   @Output() addQuote = new EventEmitter<QuotesBlueprint>();
 
 
   submitQuote(form: NgForm){
     this.addQuote.emit(this.newQuote);
-    
+    this.newQuote = new QuotesBlueprint(0, "","", "", new Date(), 0, 0);
+
+
+
+
+
+
     // form.resetForm()
 
   }
