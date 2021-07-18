@@ -16,8 +16,7 @@ export class DateCountPipe implements PipeTransform {
 
     var dateDifferenceSeconds = dateDifference*0.001; //converts miliseconds to seconds
 
-    // var dateCounter = Math.trunc(dateDifferenceSeconds/secondsInDay);
-    var dateCounter =(dateDifferenceSeconds/secondsInDay);
+    var dateCounter = Math.trunc(dateDifferenceSeconds/secondsInDay);
     var hoursCounter = Math.trunc(dateDifferenceSeconds/secondsInHour);
     var minutesCounter = Math.trunc(dateDifferenceSeconds/secondsInMinute);
     var secondsCounter = Math.trunc(dateDifferenceSeconds);

@@ -124,6 +124,14 @@
 .like p:hover, .dislike p:hover{
   transform: scale(1.3);
 }
+
+.like{
+  color: green;
+}
+
+.dislike{
+  color: red;
+}
 .toggle .btn:hover{
   background-color: #1b1a46;
 }
