@@ -19,8 +19,6 @@ export class DateCountPipe implements PipeTransform {
     var secondsDifference = Math.abs(todayWithSeconds - value);
 
 
-
-
     const secondsInDay = 86400; //60 seconds * 60 minutes in an hour * 24 hours in a day
     const secondsInHour = 3600; //60 seconds * 60 minutes in an hour
     const secondsInMinute = 60;
@@ -43,13 +41,7 @@ export class DateCountPipe implements PipeTransform {
     var hourResult = hoursCounter + " hours ago";
     var minResult = minutesCounter + " minutes ago";
     var secResult = secondsCounter + " seconds ago";
-    // return secResult;
-
-    // if (hoursCounter >= 1 && value > todayWithNoTime){
-    //   return dayResult;
-    // }else{
-    //   return (dayResult);
-    // }
+   
 
     if (dateCounter >= 1){
       return dayResult;
@@ -63,21 +55,6 @@ export class DateCountPipe implements PipeTransform {
     else{
       return secResult;
     }
-
-
-//     if (dateDifferenceSeconds>= 86400){
-//       return dayResult;
-//     }
-//     else if (dateDifferenceSeconds>= 3600){
-//       return hourResult;
-//     }
-//     else if (dateDifferenceSeconds>= 60){
-//       return minResult;
-//     }
-//     else {
-//       return secResult;
-//     }
-
 
 
   }

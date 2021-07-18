@@ -11,7 +11,6 @@ import { QuoteMoreDetailsComponent } from './quote-more-details/quote-more-detai
 import { CursorPointerDirective } from './cursor-pointer.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { HighestUpvotesDirective } from './highest-upvotes.directive';
-import { HoursCountPipe } from './hours-count.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { HoursCountPipe } from './hours-count.pipe';
     CursorPointerDirective,
     DateCountPipe,
     HighestUpvotesDirective,
-    HoursCountPipe
   ],
   imports: [
     BrowserModule,
