@@ -11,13 +11,18 @@ export class DateCountPipe implements PipeTransform {
     var dateDifference = Math.abs(value - todayWithNoTime) //returns value in miliseconds
     const secondsInDay = 86400; //60 seconds * 60 minutes in an hour * 24 hours in a day
     const secondsInHour = 3600; //60 seconds * 60 minutes in an hour
+    const secondsInMinute = 60;
+
 
     var dateDifferenceSeconds = dateDifference*0.001; //converts miliseconds to seconds
 
-    var dateCounter = dateDifferenceSeconds/secondsInDay;
-    var hoursCounter = dateDifferenceSeconds/secondsInHour;
+    var dateCounter = Math.trunc(dateDifferenceSeconds/secondsInDay);
+    var hoursCounter = Math.trunc(dateDifferenceSeconds/secondsInHour);
+    var minutesCounter = Math.trunc(dateDifferenceSeconds/secondsInMinute);
+
     var dayResult = dateCounter + " days ago";
-    var hourResult = hoursCounter + " hours ago"
+    var hourResult = hoursCounter + " hours ago";
+    var minResult = minutesCounter + "minutes ago"
 
     if (dateCounter >= 1 && value > todayWithNoTime){
       return dayResult;

@@ -13,4 +13,3 @@ export class CursorPointerDirective {
 }
 
 
-// textDecoration='line-through'

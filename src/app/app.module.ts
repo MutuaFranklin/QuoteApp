@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { QuoteMoreDetailsComponent } from './quote-more-details/quote-more-details.component';
 import { CursorPointerDirective } from './cursor-pointer.directive';
 import { DateCountPipe } from './date-count.pipe';
+import { HighestUpvotesDirective } from './highest-upvotes.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DateCountPipe } from './date-count.pipe';
     QuotesFormComponent,
     QuoteMoreDetailsComponent,
     CursorPointerDirective,
-    DateCountPipe
+    DateCountPipe,
+    HighestUpvotesDirective
   ],
   imports: [
     BrowserModule,
