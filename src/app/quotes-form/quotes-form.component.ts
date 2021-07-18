@@ -11,7 +11,6 @@ import * as $ from 'jquery';
   styleUrls: ['./quotes-form.component.css']
 })
 export class QuotesFormComponent implements OnInit {
-
   newQuote = new QuotesBlueprint(0, "","", "", new Date(), 0, 0);
   @Output() addQuote = new EventEmitter<QuotesBlueprint>();
 
