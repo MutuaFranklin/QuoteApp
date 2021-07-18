@@ -10,17 +10,11 @@
 
 }
 
-
-.main-section{
-  display: flex;
-
-}
-
-
 .form-container{
   margin-top: 5px;
   color: white;
-  height: 820px;
+  height: auto;
+  margin-bottom: 10px;
 
 
   /* background-color: #085a7d; */
@@ -136,10 +130,33 @@
 
 .popular-container{
   color: white;
+  /* background-color: rgba(3, 3, 90, 0.4); */
+
 }
 
 
 .main-page h4{
   font-size: 17px;
   text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {  .quote-container{
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+
+  .popular-container{
+    background-color: rgb(43, 26, 75);
+    color: white;
+  }
+
+  .popular-container h4{
+    margin-top: 20px;
+  }
+
+
 }

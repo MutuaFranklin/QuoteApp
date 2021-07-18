@@ -16,19 +16,38 @@ export class DateCountPipe implements PipeTransform {
 
     var dateDifferenceSeconds = dateDifference*0.001; //converts miliseconds to seconds
 
-    var dateCounter = Math.trunc(dateDifferenceSeconds/secondsInDay);
+    // var dateCounter = Math.trunc(dateDifferenceSeconds/secondsInDay);
+    var dateCounter =(dateDifferenceSeconds/secondsInDay);
     var hoursCounter = Math.trunc(dateDifferenceSeconds/secondsInHour);
     var minutesCounter = Math.trunc(dateDifferenceSeconds/secondsInMinute);
+    var secondsCounter = Math.trunc(dateDifferenceSeconds);
 
     var dayResult = dateCounter + " days ago";
     var hourResult = hoursCounter + " hours ago";
-    var minResult = minutesCounter + "minutes ago"
+    var minResult = minutesCounter + "minutes ago";
+    var secResult = secondsCounter + "seconds ago";
 
-    if (dateCounter >= 1 && value > todayWithNoTime){
+    // if (dateCounter >= 1 && value > todayWithNoTime){
+    //   return dayResult;
+    // }else{
+    //   return (dayResult);
+    // }
+
+
+    if (dateDifferenceSeconds>= 86400){
       return dayResult;
-    }else{
-      return (dayResult);
     }
+    else if (dateDifferenceSeconds>= 3600){
+      return hourResult;
+    }
+    else if (dateDifferenceSeconds>= 60){
+      return minResult;
+    }
+    else {
+      return secResult;
+    }
+
+
 
   }
 }

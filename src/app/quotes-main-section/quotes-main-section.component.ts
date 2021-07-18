@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { QuotesBlueprint } from 'src/models/quotes-blueprint';
 
 @Component({
@@ -7,6 +7,7 @@ import { QuotesBlueprint } from 'src/models/quotes-blueprint';
   styleUrls: ['./quotes-main-section.component.css']
 })
 export class QuotesMainSectionComponent implements OnInit {
+
   quotes: QuotesBlueprint[] = [
     new QuotesBlueprint(1, 'Many of life’s failures are people who did not realize how close they were to success when they gave up.', 'Thomas A. Edison', 'Franklin Mutua', new Date(2021,6,15), 23, 4 ),
     new QuotesBlueprint(2, 'The purpose of our lives is to be happy','Dalai Lama', 'Flynn Jones', new Date(2021,5,12), 10, 6),
@@ -71,6 +72,8 @@ export class QuotesMainSectionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+  
   }
 
 }
