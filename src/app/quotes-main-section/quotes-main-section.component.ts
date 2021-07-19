@@ -15,8 +15,25 @@ export class QuotesMainSectionComponent implements OnInit {
 
     ];
 
+    // let quoteIndex: number = this.quotes.findIndex(
+    //   (quote) => quote.upVote === maxValue
+    // );
+    highVotes (){
+      let maxValue: number = Math.max.apply(
+      Math,
+      this.quotes.map(function (quote) {
+        return quote.likes;
+        })
+      );
+      let quoteIndex: number = this.quotes.findIndex(
+      (quote) => quote.likes === maxValue
+        );
+      }
+
+
      max = Math.max(...this.quotes.map(quote => quote.likes));
      maxValues = this.quotes.filter(quote => quote.likes == this.max);
+
 
   addNewQuote(quote:any){
     let quoteLength = this.quotes.length;
@@ -45,6 +62,8 @@ export class QuotesMainSectionComponent implements OnInit {
 
   upVote(index:number){
       this.quotes[index].likes ++
+      this.highVotes();
+
 
 
   }
