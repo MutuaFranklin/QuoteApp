@@ -36,10 +36,8 @@ export class DateCountPipe implements PipeTransform {
     var minutesCounter = Math.trunc(secondsDifferenceSeconds/secondsInMinute);
     var secondsCounter = Math.trunc(secondsDifferenceSeconds);
 
-    var yearResult = yearCounter + " years ago";
+    var yearResult = yearCounter;
     var monthResult = monthCounter
-
-
     var dayResult = dateCounter + " days ago";
     var hourResult = hoursCounter + " hours ago";
     var minResult = minutesCounter + " minutes ago";
@@ -48,16 +46,20 @@ export class DateCountPipe implements PipeTransform {
 
 
     if (yearCounter >= 1){
-      return yearResult;
-    }
+      if(yearResult <2){
+        return  yearCounter + " year ago";
+      }
+      else{
+        return yearCounter  + " years ago";
+      }    }
 
     else if (monthCounter >= 1){
-      if(monthResult > 1){
-        return   + " months ago";
-     }
-     else {
-       return monthCounter  + " month ago";
-     }
+      if(monthResult <2){
+        return monthCounter  + " month ago";
+      }
+      else{
+        return monthCounter  + " months ago";
+      }
     }
 
     else if (dateCounter >= 1){
